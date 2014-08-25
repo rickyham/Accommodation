@@ -36,9 +36,9 @@
     <div id="MessageSucessWrap">
         <div id="message-sucess-info"></div>
     </div>
-    <div id="quick-access-menu">
-        <a class="quick-access" href="#menu-close">
-            <img class="quick-access-menu-icon" src="assets/icons/home-icon.svg">
+    <div id="quick-access-menu" class="nav">
+        <a class="res-housing-link" href="#header">
+            <img class="quick-access-menu-icon" src="assets/icons/housin-icon.svg">
         </a>
         <a class="res-main-links" href="#about">
             <img width="30px" height="30px" class="quick-access-menu-icon" src="assets/icons/about-icon.svg">
@@ -48,9 +48,6 @@
         </a>
         <a class="res-main-links" href="#contact">
             <img class="quick-access-menu-icon" src="assets/icons/contact-icon.svg">
-        </a>
-        <a class="res-housing-link" href="#">
-            <img class="quick-access-menu-icon" src="assets/icons/housin-icon.svg">
         </a>
     </div>
     <!-- end quick menu access-->
@@ -70,27 +67,25 @@
         <!-- -end get started section -->
 
         <header id="header" class="contentWrapWidth">
-            <div id="header-content" class="containerPadding">
+            <div id="header" class="containerPadding">
                 <div id="site-logo">
                     <?php include "assets/icons/site-logo.html"; ?>
                 </div>
                 <!-- site logo div-->
 
-                <nav id="nav-wrap">
-                    <a class="main-links" href="#about">About</a>
-                    <a class="main-links" href="#services">Services</a>
-                    <a class="main-links" href="#contact">Contact</a>
-                    <a class="housing-link" href="#">Housing</a>
+                <nav id="nav-wrap" class="nav">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#housing">Housing</a>
                 </nav>
                 <!-- end nav -->
                 <div class="clearFix"></div>
 
-
-
                 <!-- mobile menu only -->
                 <a id="responsiveMenuButton" href="#menu"></a>
 
-                <nav id="nav-wrap-responsive">
+                <nav id="nav-wrap-responsive" class="nav">
                     <div id="menu-items-group">
                         <a id="menu-close" href="#menu-close"> Close </a>
                         <a class="res-main-links" href="#about">About</a>
@@ -128,7 +123,7 @@
         <section id="contact" class="contentWrapWidth">
             <div id="content-wrap" class="innerDIVpostioningAndSIze left">
                 <h1 class="left"> Lets get in touch </h1>
-                <p class="italics">All feilds marked with * must be filled in</p>
+                <p class="italics">* must be filled in</p>
 
                 <div>
                     <?php sendMail(); ?>
@@ -153,7 +148,7 @@
                         </div>
 
                         <div class="form-field-wrap">
-                            <p class="input-label">*Email Address</p>
+                            <p class="input-label">*Email</p>
                             <input class="input-fields" placeholder="eg. yourmail@gmail.com" id="email" name="email" type="email" value="<?php isEntered(@$_POST['email']);?>" />
                             <div class="error-message">
                                 <?php if(isset($_POST[ 'email'])){ echo validateEmail($_POST[ 'email']);} ?>
@@ -184,14 +179,14 @@
                     <h2> Contact info: </h2>
                     <div class="contact-personel">
                         <p>Lorna Thomas</p>
-                        <p>Phone: 07971161579</p>
-                        <a>Email: lornathomas@talktalk.net</a>
+                        <p>Phone: 07971 161579</p>
+                        <a href="mailto:lornathomas@talktalk.net?Subject=Query">Email: lornathomas@talktalk.net</a>
                     </div>
 
                     <div class="contact-personel">
                         <p>Elton Watson</p>
-                        <p>Phone: 07939006730</p>
-                        <a>Email: eltoncwatson@hotmail.co.uk</a>
+                        <p>Phone: 07939 006730</p>
+                        <a href="mailto:eltoncwatson@hotmail.co.uk?Subject=Query">Email: eltoncwatson@hotmail.co.uk</a>
                     </div>
                 </div>
                 <!-- end contact info-->
@@ -200,24 +195,24 @@
         </section>
         <!-- end section contact -->
 
-        <section id="footer" class="contentWrapWidth">
-            <div id="footer-content" class="innerDIVpostioningAndSIze">
-                <h2 style=""> Life Skill Supporting Accommodation</h2>
+        <footer class="contentWrapWidth">
+            <div class="innerDIVpostioningAndSIze">
+                <h2> Life Skill Supporting Accommodation</h2>
                 <div id="social-wrap">
                     <div class="social-icon" id="twitter"></div>
                     <div class="social-icon" id="facebook"></div>
                 </div>
-                <nav id="footer-nav-wrap">
-                    <a class="footer-main-links" href="#about">About</a>
-                    <a class="footer-main-links" href="#services">Services</a>
-                    <a class="footer-main-links" href="#contact">Contact</a>
-                    <a class="footer-housing-link" href="#">Housing</a>
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#housing">Housing</a>
                 </nav>
                 <!-- end nav -->
                 <!-- <div>Icons were provided by <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></div> -->
-                <p class="copyright">2014&copy;lifeskillsupportingAccommodation</p>
+                <p class="copyright">&copy; 2014 LifeSkillSupportingAccommodation</p>
             </div>
-        </section>
+        </footer>
         <!-- end section footer -->
 
     </div>

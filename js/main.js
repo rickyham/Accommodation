@@ -40,11 +40,13 @@ function checkGetStartedView() {
 }
 
 getStartedButton.onclick = function () {
+    exitGetStarted.style.display = 'block';
     getStartedContent.style.maxHeight = "1200px";
     checkGetStartedView();
 };
 
 exitGetStarted.onclick = function () {
+    exitGetStarted.style.display = 'none';
     getStartedContent.style.maxHeight = "0px";
 };
 
@@ -66,6 +68,21 @@ window.onscroll = function () {
     checkGetStartedView();
     openCloseQuickAccessMenu();
 };
+
+$(".nav a[href^='#']").on('click', function(e){
+
+    e.preventDefault();
+    
+    // store hash
+    var hash = this.hash,
+        position = $(hash).offset().top;
+    
+    // animate
+    $('body').animate({
+        scrollTop: position
+    }, 500); 
+    
+});
 
 
 var ajax = ajax || {};
