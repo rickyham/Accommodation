@@ -226,6 +226,7 @@
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
     <script>
         (function (b, o, i, l, e, r) {
             b.GoogleAnalyticsObject = l;
@@ -242,6 +243,7 @@
         ga('create', 'UA-XXXXX-X');
         ga('send', 'pageview');
     </script>
+-->
 </body>
 
 </html>
