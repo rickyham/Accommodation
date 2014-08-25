@@ -66,7 +66,7 @@
         </section>
         <!-- -end get started section -->
 
-        <header id="header" class="contentWrapWidth">
+        <header class="contentWrapWidth">
             <div id="header" class="containerPadding">
                 <div id="site-logo">
                     <?php include "assets/icons/site-logo.html"; ?>
